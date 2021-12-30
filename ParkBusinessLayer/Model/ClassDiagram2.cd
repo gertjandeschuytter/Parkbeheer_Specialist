@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ParkBusinessLayer.Model.Huis">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEACAAAAAAAQAEQAAAAAAIAAAhCAAABAAAgAAAAAQAA=</HashCode>
+      <FileName>Model\Huis.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Park" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="_huurcontracten" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ParkBusinessLayer.Model.Contactgegevens">
+    <Position X="4.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAgAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Contactgegevens.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ParkBusinessLayer.Model.Huurcontract">
+    <Position X="6.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAgAAAoAAAAAAAAAAAAIAAAAAAAAAABAA=</HashCode>
+      <FileName>Model\Huurcontract.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Huis" />
+      <Property Name="Huurder" />
+      <Property Name="Huurperiode" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ParkBusinessLayer.Model.Huurder">
+    <Position X="8.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAIAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Huurder.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Contactgegevens" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ParkBusinessLayer.Model.Huurperiode">
+    <Position X="8.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAACAAAIAACgAAAAAAAAA=</HashCode>
+      <FileName>Model\Huurperiode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ParkBusinessLayer.Model.Park">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAQAEACAAAAAAAAAABAAAAAABAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Model\Park.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="_huis" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="System.Collections.Generic.List&lt;T&gt;" Collapsed="true">
+    <Position X="4.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
