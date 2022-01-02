@@ -33,7 +33,7 @@ namespace ParkDataLayer.Model {
         [Required]
         public bool Actief { get; set; }
 
-        public EFParkModel Park { get; private set; }
+        public EFParkModel Park { get; set; }
 
         public List<EFHuurContractModel> HuurContracten { get; set; } = new List<EFHuurContractModel>();
 

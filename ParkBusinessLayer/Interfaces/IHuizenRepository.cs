@@ -10,7 +10,7 @@ namespace ParkBusinessLayer.Interfaces
     public interface IHuizenRepository
     {
         bool HeeftHuis(string straat, int nummer, Park park);
-        Huis VoegHuisToe(Huis h);
+        void VoegHuisToe(Huis h);
         bool HeeftHuis(int id);
         void UpdateHuis(Huis huis);
         Huis GeefHuis(int id);
