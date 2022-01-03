@@ -30,18 +30,6 @@ namespace ParkBeheerBussinesLayer.Beheerders {
             }
         }
 
-        public List<Park> GeefParken(string locatie)
-        {
-            try
-            {
-                return repo.GeefParken(locatie);
-            }
-            catch (Exception ex)
-            {
-                throw new BeheerderException("GeefParken", ex);
-            }
-        }
-
         public void UpdatePark(Park p)
         {
             try

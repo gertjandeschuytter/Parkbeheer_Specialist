@@ -10,6 +10,5 @@ namespace ParkBusinessLayer.Interfaces {
         void VoegParkToe(Park p);
         void UpdatePark(Park p);
         Park GeefPark(string id);
-        List<Park> GeefParken(string locatie);
     }
 }

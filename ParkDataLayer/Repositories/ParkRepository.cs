@@ -35,15 +35,6 @@ namespace ParkBeheerDataLayer.Repositories {
                 throw new RepositoryException("GeefPark", ex);
             }
         }
-
-        public List<Park> GeefParken(string locatie)
-        {
-            return ctx.Parken
-                   .Where(p => p.Locatie == locatie)
-                   .Select(x => MapPark.MapToDomain(x))
-                   .ToList();
-        }
-
         public void UpdatePark(Park p)
         {
             try
@@ -78,30 +69,5 @@ namespace ParkBeheerDataLayer.Repositories {
             ctx.SaveChanges();
             ctx.ChangeTracker.Clear();
         }
-
-
-        //public List<Park> GeefParken(string locatie) {
-        //    return ctx.Parken.Where(p => p.Locatie == locatie).Select(x => MapPark.MapToDomain(x)).ToList();
-        //}
-
-        //public void UpdatePark(Park p) {
-        //    try {
-        //        ctx.Parken.Update(MapPark.MapToDB(p));
-        //        SaveAndClear();
-        //    }
-        //    catch(Exception ex) {
-        //        throw new RepositoryException("UpdatePark", ex);
-        //    }
-        //}
-
-        //public void VoegParkToe(Park p) {
-        //    try {
-        //        ParkEF parkje = MapPark.MapToDB(p);
-        //        ctx.Parken.Add(parkje);
-        //        SaveAndClear();
-        //    }catch(Exception ex) {
-        //        throw new RepositoryException("VoegParkToe", ex);
-        //    }
-        //}
     }
 }

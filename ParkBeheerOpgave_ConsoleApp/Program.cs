@@ -30,7 +30,6 @@ namespace ParkBeheerOpgave_ConsoleApp {
 
             //Park parkje = new("1", "Centerparcs De Haan", "De Haan");
             //ParkBeheerder.VoegParkToe(parkje);
-            //var parken = ParkBeheerder.GeefParken("De Haan");
             //Park parkje = ParkBeheerder.GeefPark("1");
             //parkje.ZetNaam("De Haan Aangepast");
             //ParkBeheerder.UpdatePark(parkje);
