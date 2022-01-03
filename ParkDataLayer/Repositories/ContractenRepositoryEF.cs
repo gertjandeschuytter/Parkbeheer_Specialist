@@ -110,16 +110,30 @@ namespace ParkDataLayer.Repositories {
 
         public List<Huurcontract> GeefContracten(DateTime dtBegin, DateTime? dtEinde)
         {
-            var lijst = 
-                MapContract.MapListToDomain(
-                ctx.HuurContracten
-                .Where(i => i.StartDatum >= dtBegin)
-                .Include(x => x.Huis)
-                .ThenInclude(x => x.Park)
-                .Include(x => x.Huurder)
-                .ToList(),ctx);
-            return lijst;
-
+            if (dtEinde == null)
+            {
+                var lijst = ctx.HuurContracten
+                        .Include(h => h.Huis)
+                        .ThenInclude(h => h.Park)
+                        .Include(h => h.Huurder)
+                        .Where(h => h.StartDatum >= dtBegin)
+                        .Select(h => MapContract.MapToDomain(h, ctx))
+                        .AsNoTracking()
+                        .ToList();
+                return lijst;
+            }
+            else
+            {
+                var lijst = ctx.HuurContracten
+                    .Include(h => h.Huis)
+                    .ThenInclude(h => h.Park)
+                    .Include(h => h.Huurder)
+                    .Where(h => h.StartDatum >= dtBegin && h.EindDatum <= dtEinde)
+                    .Select(h => MapContract.MapToDomain(h, ctx))
+                    .AsNoTracking()
+                    .ToList();
+                return lijst;
+            }
         }
     }
 }
