@@ -20,11 +20,11 @@ namespace ParkDataLayer.Model {
         }
 
         [Key, DatabaseGenerated(DatabaseGeneratedOption.None)]
-        [MaxLength(7)]
+        [MaxLength(20)]
         public string Id { get; set; }
 
         [Required]
-        [MaxLength(50)]
+        [MaxLength(250)]
         public string Naam { get; set; }
 
         [MaxLength(500)]

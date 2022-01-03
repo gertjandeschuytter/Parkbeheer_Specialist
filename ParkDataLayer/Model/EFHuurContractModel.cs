@@ -26,7 +26,7 @@ namespace ParkDataLayer.Model {
         }
 
         [Key, DatabaseGenerated(DatabaseGeneratedOption.None)]
-        [MaxLength(7)]
+        [MaxLength(25)]
         public string Id { get; set; }
         [Required]
         public DateTime StartDatum { get; set; }

@@ -20,7 +20,9 @@ namespace ParkBeheerDataLayer.Mappers {
                 {
                     foreach (var huis in dbObject.Huizen)
                     {
-                        park.VoegHuisToe(new(huis.Straat, huis.Nr, park));
+                        Huis Huisje = new(huis.Straat, huis.Nr, park);
+                        Huisje.ZetId(huis.Id);
+                        park.VoegHuisToe(Huisje);
                     }
                 }
                 return park;

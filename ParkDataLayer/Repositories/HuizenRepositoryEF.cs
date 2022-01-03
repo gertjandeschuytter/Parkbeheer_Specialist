@@ -29,12 +29,14 @@ namespace ParkDataLayer.Repositories
         {
             try
             {
-                return MapHuis.MapToDomain(
+                return
+                    MapHuis.MapToDomain(
                     ctx.Huizen.Where(p => p.Id == id)
-                    .Include(p => p.Park)
                     .Include(p => p.HuurContracten)
                     .ThenInclude(p => p.Huurder)
-                    .AsNoTracking().FirstOrDefault());
+                    .Include(p => p.Park)
+                    .AsNoTracking()
+                    .FirstOrDefault());
             }
             catch (Exception ex)
             {

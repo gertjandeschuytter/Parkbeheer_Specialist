@@ -26,7 +26,7 @@ namespace ParkDataLayer.Model {
         }
 
         public int Id { get; set; }
-        [MaxLength((50))]
+        [MaxLength(250)]
         public string Straat { get; private set; }
         [Required]
         public int Nr { get; private set; }

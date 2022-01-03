@@ -25,6 +25,7 @@ namespace ParkBeheerDataLayer.Repositories {
             {
                 return MapPark.MapToDomain(
                     ctx.Parken
+                    .Include(h => h.Huizen)
                     .Where(x => x.Id == id)
                     .AsNoTracking()
                     .FirstOrDefault());

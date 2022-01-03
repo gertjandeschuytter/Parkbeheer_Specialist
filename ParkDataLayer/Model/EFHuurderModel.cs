@@ -32,16 +32,16 @@ namespace ParkDataLayer.Model {
         public int Id { get; set; }
 
         [Required]
-        [MaxLength(50)]
+        [MaxLength(100)]
         public string Naam { get; set; }
 
-        [MaxLength(20)]
+        [MaxLength(100)]
         public string Telefoon { get; set; }
 
-        [MaxLength(50)]
+        [MaxLength(100)]
         public string Email { get; set; }
 
-        [MaxLength(75)]
+        [MaxLength(100)]
         public string Adres { get; set; }
     }
 }

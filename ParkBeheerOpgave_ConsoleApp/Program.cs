@@ -35,8 +35,8 @@ namespace ParkBeheerOpgave_ConsoleApp {
             //parkje.ZetNaam("De Haan Aangepast");
             //ParkBeheerder.UpdatePark(parkje);
 
+
             //HuisBeheerder.VoegNieuwHuisToe("Dolfijnstraat", 12, parkje);
-            //Huis huisje = HuisBeheerder.GeefHuis(1);
             //Huis huisje3 = HuisBeheerder.GeefHuis(3);
             //huisje.ZetStraat("Dolfijnstraat Aangepast");
             //HuisBeheerder.UpdateHuis(huisje);
@@ -46,11 +46,10 @@ namespace ParkBeheerOpgave_ConsoleApp {
             //var huurdertje = HuurderBeheerder.GeefHuurder(1);
             //HuurderBeheerder.GeefHuurders("Gertjan Deschuytter");
 
-            var contractjes = ContractenBeheerder.GeefContracten(DateTime.Today, null);
-
 
             //ContractenBeheerder.MaakContract("2", new(DateTime.Today, 7), huurdertje, huisje);
             //var contractje = ContractenBeheerder.GeefContract("2");
+            //var contractjes = ContractenBeheerder.GeefContracten(DateTime.Today, null);
             //ContractenBeheerder.AnnuleerContract(contractje);
             //contractje.ZetHuis(huisje3);
             //ContractenBeheerder.UpdateContract(contractje);
