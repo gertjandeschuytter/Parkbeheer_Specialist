@@ -37,6 +37,7 @@ namespace ParkBeheerOpgave_ConsoleApp {
 
             //HuisBeheerder.VoegNieuwHuisToe("Dolfijnstraat", 12, parkje);
             //Huis huisje3 = HuisBeheerder.GeefHuis(3);
+            //Huis huisje = HuisBeheerder.GeefHuis(1);
             //huisje.ZetStraat("Dolfijnstraat Aangepast");
             //HuisBeheerder.UpdateHuis(huisje);
             //HuisBeheerder.ArchiveerHuis(huisje);
